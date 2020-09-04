@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 conda create --name drlnd python=3.6; \
 conday activate drlnd; \
 
@@ -22,8 +23,8 @@ cd ../../; \
 python -m ipykernel install --user --name drlnd --display-name "drlnd"; \
 
 #clone my github project
-git clone https://github.com/reneang17/RL_projects; \
-cd RL_projects/collector; \
+#git clone https://github.com/reneang17/RL_projects; \
+#cd RL_projects/collector; \
 
 #dowload and unzip Udacity visual enviroment
 curl https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip --output Banana.app.zip; \
