@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-conda create -y --name drlnd python=3.6; \
-conda activate drlnd; \
-
 #Install openai utilities
 git clone https://github.com/openai/gym; \
 pip install -e ./gym; \
@@ -19,9 +16,12 @@ rm -rf deep-reinforcement-learning
 #set up python kernel for drlnd env
 python -m ipykernel install --user --name drlnd --display-name "drlnd"; \
 
+# remove unnecessary clones
+rm -rf gym deep-reinforcement-learning
+
 #clone my github project
-#git clone https://github.com/reneang17/RL_projects; \
-#cd RL_projects/collector; \
+cd collector; \
+
 
 #dowload and unzip Udacity visual enviroment
 curl https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip --output Banana.app.zip; \
