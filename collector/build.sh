@@ -1,23 +1,20 @@
 #!/bin/bash
 
 
-conda create --name drlnd python=3.6; \
-conday activate drlnd; \
-
-git clone https://github.com/openai/gym; \
+conda create -y --name drlnd python=3.6; \
+conda activate drlnd; \
 
 #Install openai utilities
-cd gym; \
-pip install -e .; \
-pip install -e .'[box2d]'; \
-pip install -e .'[classic_control]'; \
-cd ..; \
+git clone https://github.com/openai/gym; \
+pip install -e ./gym; \
+pip install -e ./gym'[box2d]'; \
+pip install -e ./gym'[classic_control]'; \
+rm -rf gym
 
 #Install necessary python
 git clone https://github.com/udacity/deep-reinforcement-learning; \
-cd deep-reinforcement-learning/python; \
-pip install .; \
-cd ../../; \
+pip install ./deep-reinforcement-learning/python/; \
+rm -rf deep-reinforcement-learning
 
 #set up python kernel for drlnd env
 python -m ipykernel install --user --name drlnd --display-name "drlnd"; \
@@ -28,4 +25,4 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"; \
 
 #dowload and unzip Udacity visual enviroment
 curl https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip --output Banana.app.zip; \
-unzip Banana.app.zip; \
+unzip Banana.app.zip;
