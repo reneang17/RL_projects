@@ -39,7 +39,8 @@ jupyter notebook --no-browser --allow-root --ip 0.0.0.0
 
 
 Alternatively, to run things locally on OSX. Install Anaconda, and from the terminal run
-```bash```
+
+```bash
 conda create --name drlnd python=3.6 # create env
 conda activate drlnd # activate env
 git clone https://github.com/reneang17/RL_projects #clone this repo
