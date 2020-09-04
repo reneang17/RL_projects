@@ -1,8 +1,6 @@
 #!/bin/bash
 
 
-conda create --name drlnd python=3.6; \
-conday activate drlnd; \
 
 git clone https://github.com/openai/gym; \
 
